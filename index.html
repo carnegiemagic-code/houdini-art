@@ -12,14 +12,16 @@ h1{font-size:clamp(34px,6vw,58px);line-height:1.04;margin:0 0 16px;font-weight:6
 .covers{margin-top:26px;padding:16px 20px;background:var(--panel);border-left:3px solid var(--accent);border-radius:0 6px 6px 0}
 .covers p{margin:0;font-size:17px}
 h2{font:600 12px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:56px 0 22px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 34px}
-.work.big{grid-column:span 2}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:30px 22px}
+.work.big{grid-column:span 1}
 .frame{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:16px;display:flex;justify-content:center;align-items:center}
-.frame img{max-width:100%;height:auto;display:block;box-shadow:0 14px 34px rgba(0,0,0,.45)}
-.work.big .frame img{max-height:76vh;width:auto}
+.frame img{max-width:100%;height:auto;display:block;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.gallery .frame{height:270px;padding:12px}
+.gallery .frame img{max-height:100%;width:auto}
+
 figure{margin:0}
-figcaption h3{font-size:21px;margin:16px 0 6px;font-weight:600}
-figcaption p{margin:0;color:var(--dim);font-size:16px}
+figcaption h3{font-size:17px;margin:12px 0 4px;font-weight:600}
+figcaption p{margin:0;color:var(--dim);font-size:15px}
 .others{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
 .others .frame{height:270px;padding:12px}
 .others .frame img{max-height:100%;width:auto;box-shadow:0 8px 20px rgba(0,0,0,.4)}
@@ -34,7 +36,7 @@ footer{margin-top:64px;padding-top:26px;border-top:1px solid var(--rule)}
 footer a{color:var(--ink)}
 .links{color:var(--dim);font-size:15px;margin-top:8px}
 @media (max-width:860px){.others{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:720px){.gallery,.two{grid-template-columns:1fr}.work.big{grid-column:span 1}}
+@media (max-width:720px){.gallery{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
 </style>
 
 <div class="wrap">
